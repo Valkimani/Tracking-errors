@@ -36,16 +36,17 @@
     </head>
     <body>
         <h1>Type City</h1>
+       
         <h2></h2>
         <form id="search-form">
 
             <input type="text" id="email"
-            placeholder=""Search for a city""
+            placeholder="Search for a city"
             autocomplete="off"
             autofocus="on"
             id="search-text-input"
             />
-           <input type="submit" value="search"/>
+           <input type="submit" value="Search"/>
 
 
         </form>
@@ -58,13 +59,13 @@ function search(event){
     event.preventDefault();
     let searchInput=document.querySelector("#search-text-input")
     
-    // console.log("searching")//
+    // console.log("searchInput.value")//
 }
 
 let h2=document.querySelector("h2");
 h2.innerHTML=`Search for ${searchInput.value}....`;
 
-         let form=document.querySelector("search-form");
+         let form=document.querySelector("#search-form");
 
          form.addEventListener("submit", search)
          
