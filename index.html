@@ -40,7 +40,7 @@
         <h2></h2>
         <form id="search-form">
 
-            <input type="text" id="email"
+            <input type="text"
             placeholder="Search for a city"
             autocomplete="off"
             autofocus="on"
@@ -57,15 +57,17 @@
         <script>
 function search(event){
     event.preventDefault();
+   // alert("Searching")//;
+   
     let searchInput=document.querySelector("#search-text-input")
     
-    // console.log("searchInput.value")//
+     //console.log(searchInput.value)//
+//Moved value in the function the searchInput:unidentified//
+     let h2=document.querySelector("h2");
+h2.innerHTML=`Search for ${searchInput.value}....`;
 }
 
-let h2=document.querySelector("h2");
-h2.innerHTML=`Search for ${searchInput.value}....`;
-
-         let form=document.querySelector("#search-form");
+         let form = document.querySelector("#search-form");
 
          form.addEventListener("submit", search)
          
